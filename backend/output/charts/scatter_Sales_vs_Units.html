@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-e9a30040498f40c0daf60808fe15b8c4"}, "mark": {"type": "circle", "size": 60}, "datasets": {"data-e9a30040498f40c0daf60808fe15b8c4": [{"Date": "2024-01-02", "Region": "South", "Product": "Widget B", "Sales": 1500, "Units": 60, "Customer_Satisfaction": 4.2}, {"Date": "2024-01-10", "Region": "South", "Product": "Widget A", "Sales": 1300, "Units": 53, "Customer_Satisfaction": 4.7}, {"Date": "2024-01-09", "Region": "North", "Product": "Widget C", "Sales": 950, "Units": 45, "Customer_Satisfaction": 4.2}, {"Date": "2024-01-03", "Region": "East", "Product": "Widget A", "Sales": 1200, "Units": 55, "Customer_Satisfaction": 4.8}, {"Date": "2024-01-04", "Region": "West", "Product": "Widget C", "Sales": 800, "Units": 40, "Customer_Satisfaction": 3.9}, {"Date": "2024-01-05", "Region": "North", "Product": "Widget B", "Sales": 1600, "Units": 65, "Customer_Satisfaction": 4.1}, {"Date": "2024-01-06", "Region": "South", "Product": "Widget A", "Sales": 1100, "Units": 52, "Customer_Satisfaction": 4.6}, {"Date": "2024-01-08", "Region": "West", "Product": "Widget B", "Sales": 1400, "Units": 58, "Customer_Satisfaction": 4.3}, {"Date": "2024-01-07", "Region": "East", "Product": "Widget C", "Sales": 900, "Units": 42, "Customer_Satisfaction": 4.0}, {"Date": "2024-01-01", "Region": "North", "Product": "Widget A", "Sales": 1000, "Units": 50, "Customer_Satisfaction": 4.5}]}, "encoding": {"tooltip": [{"field": "Sales", "type": "quantitative"}, {"field": "Units", "type": "quantitative"}], "x": {"field": "Sales", "type": "quantitative"}, "y": {"field": "Units", "type": "quantitative"}}, "params": [{"name": "param_2", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Correlation: Sales vs Units", "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json"};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

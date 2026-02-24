@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" version="18.1">
+  <datasources>
+    <datasource caption="Analyzed Data" inline="true" name="excel-direct.0" version="18.1">
+      <connection class="excel-direct" cleaning="no" compat="no" dataRefreshTime="" filename="/Users/vedanshrai/Desktop/Data_analysis_agent/backend/output/tableau/Nike_Sales_Uncleaned_cleaned.xlsx" interpretationMode="0" password="" server="" validate="no"/>
+      <column-instance-metadata/>
+      <column caption="Order_ID" datatype="integer" name="[Order_ID]" role="measure" type="quantitative"/>
+      <column caption="Gender_Category" datatype="string" name="[Gender_Category]" role="dimension" type="nominal"/>
+      <column caption="Product_Line" datatype="string" name="[Product_Line]" role="dimension" type="nominal"/>
+      <column caption="Product_Name" datatype="string" name="[Product_Name]" role="dimension" type="nominal"/>
+      <column caption="Size" datatype="string" name="[Size]" role="dimension" type="nominal"/>
+      <column caption="Units_Sold" datatype="integer" name="[Units_Sold]" role="measure" type="quantitative"/>
+      <column caption="MRP" datatype="real" name="[MRP]" role="measure" type="quantitative"/>
+      <column caption="Discount_Applied" datatype="real" name="[Discount_Applied]" role="measure" type="quantitative"/>
+      <column caption="Revenue" datatype="real" name="[Revenue]" role="measure" type="quantitative"/>
+      <column caption="Order_Date" datatype="datetime" name="[Order_Date]" role="dimension" type="nominal"/>
+      <column caption="Sales_Channel" datatype="string" name="[Sales_Channel]" role="dimension" type="nominal"/>
+      <column caption="Region" datatype="string" name="[Region]" role="dimension" type="nominal"/>
+      <column caption="Profit" datatype="real" name="[Profit]" role="measure" type="quantitative"/>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="Bar: Order_ID by Gender_Categor">
+      <table>
+        <rows>[excel-direct.0].[Gender_Category]</rows>
+        <cols>SUM([excel-direct.0].[Order_ID])</cols>
+        <panes>
+          <pane>
+            <mark class="Bar"/>
+          </pane>
+        </panes>
+      </table>
+    </worksheet>
+    <worksheet name="Trend: Order_ID">
+      <table>
+        <cols>[excel-direct.0].[Order_Date]</cols>
+        <rows>SUM([excel-direct.0].[Order_ID])</rows>
+        <panes>
+          <pane>
+            <mark class="Line"/>
+          </pane>
+        </panes>
+      </table>
+    </worksheet>
+    <worksheet name="Scatter: Order_ID vs Units_Sold">
+      <table>
+        <cols>SUM([excel-direct.0].[Order_ID])</cols>
+        <rows>SUM([excel-direct.0].[Units_Sold])</rows>
+        <panes>
+          <pane>
+            <mark class="Circle"/>
+          </pane>
+        </panes>
+      </table>
+    </worksheet>
+    <worksheet name="Data Summary">
+      <table>
+        <cols>[excel-direct.0].[Order_ID] [excel-direct.0].[Gender_Category] [excel-direct.0].[Product_Line] [excel-direct.0].[Product_Name] [excel-direct.0].[Size]</cols>
+        <panes>
+          <pane>
+            <mark class="Text"/>
+          </pane>
+        </panes>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Auto-Generated Dashboard">
+      <size maxheight="800" maxwidth="1200" minheight="600" minwidth="1000"/>
+      <zones>
+        <zone h="200" id="1" name="Bar: Order_ID by Gender_Categor" w="1200" x="0" y="0" type="sheet"/>
+        <zone h="200" id="2" name="Trend: Order_ID" w="1200" x="0" y="200" type="sheet"/>
+        <zone h="200" id="3" name="Scatter: Order_ID vs Units_Sold" w="1200" x="0" y="400" type="sheet"/>
+        <zone h="200" id="4" name="Data Summary" w="1200" x="0" y="600" type="sheet"/>
+      </zones>
+    </dashboard>
+  </dashboards>
+</workbook>

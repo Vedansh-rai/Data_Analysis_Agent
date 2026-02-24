@@ -1,0 +1,134 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    }
+  },
+  "data": {
+    "name": "data-9883948deb5e3185e9a8720893e26bf8"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "tooltip": [
+      {
+        "field": "Date",
+        "type": "nominal"
+      },
+      {
+        "field": "Sales",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "field": "Date",
+      "sort": "-y",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "Sales",
+      "type": "quantitative"
+    }
+  },
+  "params": [
+    {
+      "name": "param_1",
+      "select": {
+        "type": "interval",
+        "encodings": [
+          "x",
+          "y"
+        ]
+      },
+      "bind": "scales"
+    }
+  ],
+  "title": "Top 20 Sales by Date",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-9883948deb5e3185e9a8720893e26bf8": [
+      {
+        "Date": "2024-01-01",
+        "Region": "North",
+        "Product": "Widget A",
+        "Sales": 1000,
+        "Units": 50,
+        "Customer_Satisfaction": 4.5
+      },
+      {
+        "Date": "2024-01-02",
+        "Region": "South",
+        "Product": "Widget B",
+        "Sales": 1500,
+        "Units": 60,
+        "Customer_Satisfaction": 4.2
+      },
+      {
+        "Date": "2024-01-03",
+        "Region": "East",
+        "Product": "Widget A",
+        "Sales": 1200,
+        "Units": 55,
+        "Customer_Satisfaction": 4.8
+      },
+      {
+        "Date": "2024-01-04",
+        "Region": "West",
+        "Product": "Widget C",
+        "Sales": 800,
+        "Units": 40,
+        "Customer_Satisfaction": 3.9
+      },
+      {
+        "Date": "2024-01-05",
+        "Region": "North",
+        "Product": "Widget B",
+        "Sales": 1600,
+        "Units": 65,
+        "Customer_Satisfaction": 4.1
+      },
+      {
+        "Date": "2024-01-06",
+        "Region": "South",
+        "Product": "Widget A",
+        "Sales": 1100,
+        "Units": 52,
+        "Customer_Satisfaction": 4.6
+      },
+      {
+        "Date": "2024-01-07",
+        "Region": "East",
+        "Product": "Widget C",
+        "Sales": 900,
+        "Units": 42,
+        "Customer_Satisfaction": 4.0
+      },
+      {
+        "Date": "2024-01-08",
+        "Region": "West",
+        "Product": "Widget B",
+        "Sales": 1400,
+        "Units": 58,
+        "Customer_Satisfaction": 4.3
+      },
+      {
+        "Date": "2024-01-09",
+        "Region": "North",
+        "Product": "Widget C",
+        "Sales": 950,
+        "Units": 45,
+        "Customer_Satisfaction": 4.2
+      },
+      {
+        "Date": "2024-01-10",
+        "Region": "South",
+        "Product": "Widget A",
+        "Sales": 1300,
+        "Units": 53,
+        "Customer_Satisfaction": 4.7
+      }
+    ]
+  }
+}

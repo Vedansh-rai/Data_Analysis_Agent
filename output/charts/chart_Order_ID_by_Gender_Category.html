@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-6ffa5ed30428fcac8cd5d92ec80f1f34"}, "mark": {"type": "bar"}, "datasets": {"data-6ffa5ed30428fcac8cd5d92ec80f1f34": [{"Order_ID": 2000, "Gender_Category": "Kids", "Product_Line": "Training", "Product_Name": "SuperRep Go", "Size": "M", "Units_Sold": null, "MRP": null, "Discount_Applied": 0.47, "Revenue": 0.0, "Order_Date": "2024-03-09", "Sales_Channel": "Online", "Region": "bengaluru", "Profit": -770.45}, {"Order_ID": 2001, "Gender_Category": "Women", "Product_Line": "Soccer", "Product_Name": "Tiempo Legend", "Size": "M", "Units_Sold": 3.0, "MRP": 4957.93, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": "2024-07-09", "Sales_Channel": "Retail", "Region": "Hyd", "Profit": -112.53}, {"Order_ID": 2002, "Gender_Category": "Women", "Product_Line": "Soccer", "Product_Name": "Premier III", "Size": "M", "Units_Sold": 4.0, "MRP": null, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": null, "Sales_Channel": "Retail", "Region": "Mumbai", "Profit": 3337.34}, {"Order_ID": 2003, "Gender_Category": "Kids", "Product_Line": "Lifestyle", "Product_Name": "Blazer Mid", "Size": "L", "Units_Sold": null, "MRP": 9673.57, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": "04-10-2024", "Sales_Channel": "Online", "Region": "Pune", "Profit": 3376.85}, {"Order_ID": 2004, "Gender_Category": "Kids", "Product_Line": "Running", "Product_Name": "React Infinity", "Size": "XL", "Units_Sold": null, "MRP": null, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": "2024/09/12", "Sales_Channel": "Retail", "Region": "Delhi", "Profit": 187.89}, {"Order_ID": 2005, "Gender_Category": "Women", "Product_Line": "Training", "Product_Name": "Flex Trainer", "Size": "M", "Units_Sold": 1.0, "MRP": 7363.96, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": null, "Sales_Channel": "Retail", "Region": "Delhi", "Profit": 1415.98}, {"Order_ID": 2006, "Gender_Category": "Men", "Product_Line": "Training", "Product_Name": "SuperRep Go", "Size": "M", "Units_Sold": null, "MRP": 6819.78, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": "04-06-2025", "Sales_Channel": "Online", "Region": "Bangalore", "Profit": 1802.09}, {"Order_ID": 2007, "Gender_Category": "Kids", "Product_Line": "Training", "Product_Name": "SuperRep Go", "Size": "M", "Units_Sold": 1.0, "MRP": null, "Discount_Applied": 0.32, "Revenue": 0.0, "Order_Date": null, "Sales_Channel": "Retail", "Region": "Bangalore", "Profit": 2928.36}, {"Order_ID": 2008, "Gender_Category": "Women", "Product_Line": "Soccer", "Product_Name": "Premier III", "Size": "11", "Units_Sold": -1.0, "MRP": null, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": "11-10-2024", "Sales_Channel": "Online", "Region": "Hyderabad", "Profit": -731.18}, {"Order_ID": 2009, "Gender_Category": "Men", "Product_Line": "Soccer", "Product_Name": "Mercurial Superfly", "Size": "M", "Units_Sold": 4.0, "MRP": null, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": null, "Sales_Channel": "Online", "Region": "Pune", "Profit": 3929.61}, {"Order_ID": 2010, "Gender_Category": "Kids", "Product_Line": "Lifestyle", "Product_Name": "Waffle One", "Size": "L", "Units_Sold": 1.0, "MRP": 7949.83, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": "2025/01/16", "Sales_Channel": "Online", "Region": "Pune", "Profit": 1965.56}, {"Order_ID": 2011, "Gender_Category": "Women", "Product_Line": "Training", "Product_Name": "Flex Trainer", "Size": "L", "Units_Sold": -1.0, "MRP": 9586.08, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": null, "Sales_Channel": "Retail", "Region": "Hyd", "Profit": 1667.08}, {"Order_ID": 2018, "Gender_Category": "Kids", "Product_Line": "Lifestyle", "Product_Name": "Blazer Mid", "Size": null, "Units_Sold": -1.0, "MRP": null, "Discount_Applied": 0.86, "Revenue": 0.0, "Order_Date": "13-11-2024", "Sales_Channel": "Online", "Region": "Delhi", "Profit": 2109.48}, {"Order_ID": 2013, "Gender_Category": "Kids", "Product_Line": "Training", "Product_Name": "SuperRep Go", "Size": null, "Units_Sold": null, "MRP": 9671.05, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": "19-09-2024", "Sales_Channel": "Online", "Region": "hyderbad", "Profit": 299.34}, {"Order_ID": 2014, "Gender_Category": "Women", "Product_Line": "Running", "Product_Name": "React Infinity", "Size": "11", "Units_Sold": null, "MRP": null, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": "2025-04-12", "Sales_Channel": "Online", "Region": "Bangalore", "Profit": -1044.4}, {"Order_ID": 2015, "Gender_Category": "Kids", "Product_Line": "Basketball", "Product_Name": "Air Jordan", "Size": null, "Units_Sold": null, "MRP": 3285.52, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": "31-05-2025", "Sales_Channel": "Retail", "Region": "Kolkata", "Profit": 1193.21}, {"Order_ID": 2016, "Gender_Category": "Women", "Product_Line": "Basketball", "Product_Name": "Air Jordan", "Size": "M", "Units_Sold": 1.0, "MRP": 9871.75, "Discount_Applied": 0.3, "Revenue": 6910.22, "Order_Date": null, "Sales_Channel": "Retail", "Region": "hyderbad", "Profit": 2452.69}, {"Order_ID": 2017, "Gender_Category": "Women", "Product_Line": "Basketball", "Product_Name": "Air Jordan", "Size": "9", "Units_Sold": 4.0, "MRP": null, "Discount_Applied": null, "Revenue": 0.0, "Order_Date": "17-03-2025", "Sales_Channel": "Retail", "Region": "Delhi", "Profit": 1946.24}, {"Order_ID": 2018, "Gender_Category": "Men", "Product_Line": "Training", "Product_Name": "Metcon 7", "Size": "XL", "Units_Sold": 0.0, "MRP": null, "Discount_Applied": 1.17, "Revenue": 0.0, "Order_Date": null, "Sales_Channel": "Online", "Region": "bengaluru", "Profit": -966.89}, {"Order_ID": 2019, "Gender_Category": "Kids", "Product_Line": "Running", "Product_Name": "Air Zoom", "Size": "6", "Units_Sold": 0.0, "MRP": 3424.06, "Discount_Applied": 0.32, "Revenue": 0.0, "Order_Date": "2025/01/17", "Sales_Channel": "Online", "Region": "Hyderabad", "Profit": 1915.24}]}, "encoding": {"tooltip": [{"field": "Gender_Category", "type": "nominal"}, {"field": "Order_ID", "type": "quantitative"}], "x": {"field": "Gender_Category", "sort": "-y", "type": "nominal"}, "y": {"field": "Order_ID", "type": "quantitative"}}, "params": [{"name": "param_1", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Top 20 Order_ID by Gender_Category", "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json"};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

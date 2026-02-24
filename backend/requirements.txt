@@ -1,0 +1,12 @@
+pandas
+numpy
+altair
+pydantic
+scipy
+jinja2
+python-dotenv
+openai
+fastapi
+uvicorn
+python-multipart
+shutil
